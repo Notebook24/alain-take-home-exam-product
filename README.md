@@ -50,20 +50,20 @@ cp .env.example .env
 
 - **Edit the .env (can be opened in any editor) and fill in:**
 ```bash
-exports DB_HOST=mysql-db
-exports DB_USER=<yourusername>        
-exports DB_PASSWORD=<yourpassword>    
-exports DB_NAME=examDB
-exports PORT=3000
+DB_HOST=mysql-db
+DB_USER=<yourusername>        
+DB_PASSWORD=<yourpassword>    
+DB_NAME=examDB
+PORT=3000
 ```
 
 - **Example:**
 ```bash
-exports DB_HOST=mysql-db
-exports DB_USER=Alain
-exports DB_PASSWORD=123
-exports DB_NAME=examDB
-exports PORT=3000
+DB_HOST=mysql-db
+DB_USER=Alain
+DB_PASSWORD=123
+DB_NAME=examDB
+PORT=3000
 ```
 
 ### 3. Build and start the app using Docker
