@@ -21,6 +21,21 @@ This API allows you to manage products using Dockerized Node.js and MySQL. This 
 
 ## How to Run
 
+### 0. Install Docker and Git
+1. Download and install Docker Desktop from this link: https://www.docker.com/products/docker-desktop/
+2. During installation, make sure **WSL 2 backend** is selected if you are on Windows.
+3. After installation, open Docker Desktop to make sure it’s running.
+4. Verify Docker is working:
+```bash
+docker --version
+docker-compose --version
+```
+5. Download and install Git.
+6. Verify Git is installed:
+```bash
+git --version
+```
+
 ### 1. Clone the repository
 ```bash
 git clone https://github.com/Notebook24/LSCS_TakeHomeExam.git
