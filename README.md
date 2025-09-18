@@ -76,8 +76,10 @@ docker-compose up -d --build
 docker ps
 ```
 **Should see:**
+```bash
 mysql:8.0
 node-app (Express server)
+```
 
 ### 4. Example API Usage (curl)
 
