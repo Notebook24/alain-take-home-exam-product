@@ -48,16 +48,7 @@ cd LSCS_TakeHomeExam
 cp .env.example .env
 ```
 
-**Edit the .env (can be opened in any editor) and fill in:**
-```bash
-DB_HOST=mysql-db
-DB_USER=<yourusername>        
-DB_PASSWORD=<yourpassword>    
-DB_NAME=examDB
-PORT=3000
-```
-
-**Example:**
+**This is an example content of the .env file:**
 ```bash
 DB_HOST=mysql-db
 DB_USER=Alain
@@ -65,6 +56,8 @@ DB_PASSWORD=123
 DB_NAME=examDB
 PORT=3000
 ```
+
+**Note: There is no need to install MySQL, as the Docker Compose automatically creates the MySQL database**
 
 ### 3. Build and start the app using Docker
 ```bash
@@ -87,16 +80,16 @@ node-app (Express server)
 **Note:** Windows users may need to escape `&` in URLs with `^`. Mac/Linux users can use `&`.
 
 **These are the input rules for creating or updating a product:**
-- id: Primary key, auto-increment, automatically set (The system does not allow ID input)
-- name: Product name, required (VARCHAR(20))
-- price: Product price, required, must be greater than 0 (DECIMAL(12,2))
-- description: Product description, required (VARCHAR(200))
-- stock_quantity: Quantity in stock, must be greater than or equal to 0 (INTEGER)
-- weight: Product weight, must be greater than 0 (DECIMAL(10,2))
-- created_at: Timestamp when product is created (TIMESTAMP)
-- updated_at: Timestamp when product is updated (TIMESTAMP)
-- expiry_date: Optional expiry date (DATETIME). Must be later than the creation time. This rule is enforced in the Node.js API, not in the database schema, because MySQL cannot use a CHECK constraint referencing another column.
-- brand: Brand name, required (VARCHAR(20))
+- `id`: Primary key, auto-increment, automatically set (The system does not allow ID input)
+- `name`: Product name, required (VARCHAR(20))
+- `price`: Product price, required, must be greater than 0 (DECIMAL(12,2))
+- `description`: Product description, required (VARCHAR(200))
+- `stock_quantity`: Quantity in stock, must be greater than or equal to 0 (INTEGER)
+- `weight`: Product weight, must be greater than 0 (DECIMAL(10,2))
+- `created_at`: Timestamp when product is created (TIMESTAMP)
+- `updated_at`: Timestamp when product is updated (TIMESTAMP)
+- `expiry_date`: Optional expiry date (DATETIME). Must be later than the creation time. This rule is enforced in the Node.js API, not in the database schema, because MySQL cannot use a CHECK constraint referencing another column.
+- `brand`: Brand name, required (VARCHAR(20))
 
 - **Note:** The system automatically assigns value to `created_at` and `updated_at` fields upon creation. Any attempt to input a different value upon creation is overriden by the system to be the current time to ensure product transparency.
 - **Note:** The user cannot update the `created_at`, `updated_at`, and `expiry_date` fields. These fields are automatically managed by the system and are usually uneditable in real-world scenarios to ensure product transparency.
