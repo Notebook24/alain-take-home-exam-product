@@ -98,8 +98,8 @@ node-app (Express server)
 - expiry_date: Optional expiry date, must not be before creation (This condition is checked by the node.js, not the database schema)
 - brand: Brand name, required
 
-**Note:** The system automatically assigns value to `created_at` and `updated_at` fields upon creation. Any attempt to input a different value upon creation is overriden by the system to be the current time to ensure product transparency.
-**Note:** The user cannot update the `created_at`, `updated_at`, and `expiry_date` fields. These fields are automatically managed by the system and are usually uneditable in real-world scenarios to ensure product transparency.
+- **Note:** The system automatically assigns value to `created_at` and `updated_at` fields upon creation. Any attempt to input a different value upon creation is overriden by the system to be the current time to ensure product transparency.
+- **Note:** The user cannot update the `created_at`, `updated_at`, and `expiry_date` fields. These fields are automatically managed by the system and are usually uneditable in real-world scenarios to ensure product transparency.
 
 **a. Create a product**
 **Example: Creating a product**
