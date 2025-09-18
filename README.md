@@ -38,8 +38,8 @@ git --version
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/Notebook24/alain-take-home-exam-product.git
-cd alain-take-home-exam-product
+git clone https://github.com/Notebook24/alain-take-home-exam-products.git
+cd alain-take-home-exam-products
 ```
 
 ### 2. Configure environment
