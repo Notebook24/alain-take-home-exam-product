@@ -88,15 +88,15 @@ node-app (Express server)
 
 **These are the input rules for creating or updating a product:**
 - id: Primary key, auto-increment, automatically set (The system does not allow ID input)
-- name: Product name, required
-- price: Product price, required, must be greater than 0
-- description: Product description, required
-- stock_quantity: Quantity in stock, must be greater than or equal to 0
-- weight: Product weight, must be greater than 0
-- created_at: Timestamp when product is created
-- updated_at: Timestamp when product is updated
-- expiry_date: Optional expiry date, must not be before creation (This condition is checked by the node.js, not the database schema)
-- brand: Brand name, required
+- name: Product name, required (VARCHAR(20))
+- price: Product price, required, must be greater than 0 (DECIMAL(12,2))
+- description: Product description, required (VARCHAR(200))
+- stock_quantity: Quantity in stock, must be greater than or equal to 0 (INTEGER)
+- weight: Product weight, must be greater than 0 (DECIMAL(10,2))
+- created_at: Timestamp when product is created (TIMESTAMP)
+- updated_at: Timestamp when product is updated (TIMESTAMP)
+- expiry_date: Optional expiry date (DATETIME). Must be later than the creation time. This rule is enforced in the Node.js API, not in the database schema, because MySQL cannot use a CHECK constraint referencing another column.
+- brand: Brand name, required (VARCHAR(20))
 
 - **Note:** The system automatically assigns value to `created_at` and `updated_at` fields upon creation. Any attempt to input a different value upon creation is overriden by the system to be the current time to ensure product transparency.
 - **Note:** The user cannot update the `created_at`, `updated_at`, and `expiry_date` fields. These fields are automatically managed by the system and are usually uneditable in real-world scenarios to ensure product transparency.
