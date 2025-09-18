@@ -38,17 +38,17 @@ git --version
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/Notebook24/LSCS_TakeHomeExam.git
-cd LSCS_TakeHomeExam
+git clone https://github.com/Notebook24/alain-take-home-exam-product.git
+cd alain-take-home-exam-product
 ```
 
 ### 2. Configure environment
-**Copy example env file in Windows**
+**Copy .env.example file for Windows**
 ```bash
 copy .env.example .env
 ```
 
-**Copy example env file for MacOS/Linux**
+**Copy .env.example file for MacOS/Linux**
 ```bash
 cp .env.example .env
 ```
