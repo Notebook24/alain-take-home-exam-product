@@ -43,16 +43,21 @@ cd LSCS_TakeHomeExam
 ```
 
 ### 2. Configure environment
-**Copy example env file**
+**Copy example env file in Windows**
+```bash
+copy .env.example .env
+```
+
+**Copy example env file for MacOS/Linux**
 ```bash
 cp .env.example .env
 ```
 
-**This is an example content of the .env file:**
+**This is the content of the .env.example file:**
 ```bash
 DB_HOST=mysql-db
-DB_USER=Alain
-DB_PASSWORD=123
+DB_USER=root
+DB_PASSWORD=Choichoi22
 DB_NAME=examDB
 PORT=3000
 ```
